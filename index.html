@@ -1,53 +1,40 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Воспроизведение звука</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
-            font-family: Arial, sans-serif;
-        }
-        button {
-            padding: 500px 500px;
-            font-size: 16px;
-            cursor: pointer;
-            color: blue;
-
-
-        button {
-            padding: 500px 500px;
-            font-size: 16px;
-            cursor: pointer;
-            color: blue;
-   
-        }
-    </style>
-</head>
-<body>
-    
-    <button id="play-button">Включить звук</button>
-    <audio id="audio" src="sound1.mp3"></audio> <!-- Замените на путь к вашему звуковому файлу -->
-
-
-    <button1 id="play-button">Включить звук</button>
-    <audio id="audio" src="sound1.mp3"></audio> <!-- Замените на путь к вашему звуковому файлу -->
-
-    <script>
-        const playButton = document.getElementById('play-button');
-        const audio = document.getElementById('audio');
-
-        playButton.addEventListener('click', () => {
-            audio.play().catch((error) => {
-                console.error('Ошибка воспроизведения звука:', error);
-            });
-        });
-    </script>
-
-</body>
-</html>
+ <html lang="ru">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Воспроизведение звука</title>
+     <style>
+         body {
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             height: 100vh;
+             background-color: #f0f0f0;
+             font-family: Arial, sans-serif;
+         }
+         button {
+             padding: 10px 15px;
+             font-size: 16px;
+             cursor: pointer;
+         }
+     </style>
+ </head>
+ <body>
+ 
+     <button id="play-button">Включить звук</button>
+     <audio id="audio" src="sound1.mp3"></audio> <!-- Замените на путь к вашему звуковому файлу -->
+ 
+     <script>
+         const playButton = document.getElementById('play-button');
+         const audio = document.getElementById('audio');
+ 
+         playButton.addEventListener('click', () => {
+             audio.play().catch((error) => {
+                 console.error('Ошибка воспроизведения звука:', error);
+             });
+         });
+     </script>
+ 
+ </body>
+ </html>
