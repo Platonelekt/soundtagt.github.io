@@ -1,2 +1,4 @@
 # soundtagt.github.io
-1111
+Это для троллинга своиз друзей с помощью NFC меток
+
+This is for trolling your friends using NFC tags.
