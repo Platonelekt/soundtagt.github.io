@@ -1,50 +1,41 @@
 <!DOCTYPE html>
- <html lang="ru">
- <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>розыгришь билета</title>
-     <style>
-         body {
-             display: flex;
-             justify-content: center;
-             align-items: center;
-             height: 100vh;
-             background-color: #f0f0f0;
-             font-family: Arial, sans-serif;
-         }
-         button {
-             padding: 500px 500px;
-             font-size: 16px;
-             cursor: pointer;
-         }
-     </style>
- </head>
- <body>
-     
-  
-  <form>
-
-   <lable>Юз тг </lable>
-   <input type ="text" value="Юз тг">
-  </form>
-      
-     
-  
-  
-     <button id="play-button">Участвовать</button>
-     <audio id="audio" src="zhestokie-stony.mp3"></audio> <!-- Замените на путь к вашему звуковому файлу -->
+  <html lang="ru">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Воспроизведение звука</title>
+      <style>
+          body {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 100vh;
+              background-color: #f0f0f0;
+              font-family: Arial, sans-serif;
+          }
+          button {
+              padding: 1000px 1500px;
+              font-size: 16px;
+              cursor: pointer;
+          }
+      </style>
+  </head>
+  <body>
  
-     <script>
-         const playButton = document.getElementById('play-button');
-         const audio = document.getElementById('audio');
+      <button disabled id="play-button">Включить звук</button>
+      <button id="play-button">Включить звук</button>
+      <audio id="audio" src="zhestokie-stony.mp3"></audio> <!-- Замените на путь к вашему звуковому файлу -->
  
-         playButton.addEventListener('click', () => {
-             audio.play().catch((error) => {
-                 console.error('Ошибка воспроизведения звука:', error);
-             });
-         });
-     </script>
+      <script>
+          const playButton = document.getElementById('play-button');
+          const audio = document.getElementById('audio');
  
- </body>
- </html>
+          playButton.addEventListener('click', () => {
+              audio.play().catch((error) => {
+                  console.error('Ошибка воспроизведения звука:', error);
+              });
+          });
+      </script>
+ 
+  </body>
+  </html>
